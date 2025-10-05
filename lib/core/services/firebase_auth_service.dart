@@ -36,10 +36,7 @@ class FirebaseAuthService {
 
       final userEmail = googleUser.email;
       final userName = googleUser.displayName;
-      return UserModel(
-        userEmail: userEmail,
-        userFullName: userName!,
-      );
+      return UserModel(userEmail: userEmail, userFullName: userName!);
     } catch (_) {
       throw GoogleSignInException();
     }
@@ -55,10 +52,7 @@ class FirebaseAuthService {
       final userEmail = googleUser.email;
       final userName = googleUser.displayName;
 
-      return UserModel(
-        userEmail: userEmail,
-        userFullName: userName!,
-      );
+      return UserModel(userEmail: userEmail, userFullName: userName!);
     } catch (_) {
       throw GoogleSignInException();
     }
